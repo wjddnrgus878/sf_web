@@ -1,0 +1,52 @@
+<?php
+  header('Content-Type: text/html; charset=utf-8');
+  include "db_SESSION.php";
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>Security Factorial</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid"></div>
+		  <div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="./index.html">SecurityFactorial</a>
+		</div>
+		  <div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+			  <li class="active"><a href="./index.html">Home</a></li>
+			  <li><a href="./study/index.html">Study</a></li>
+			  <li><a href="./project/index.html">Project</a></li>
+			  <li><a href="./member.php">Profile</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<?php
+					if( !isset( $_SESSION['username'] ) ) {
+						?>
+			  <li><a href="./LOGIN_~1/Register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			  <li><a href="./LOGIN_~1/Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			  <?php }
+			  else{ ?>
+				<li><a href="/login/logout.php"><span class='glyphicon glyphicon-log-out'></span><span> Logout</span></a></li>
+				<li> <?php echo "<a href='/profile/index.html?userid=".$_SESSION["username"]."'><span class='glyphicon glyphicon-user'></span>"; ?> <?php echo($_SESSION[ 'username' ]); ?></a></li>
+			  <?php } ?>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+    </div>
+</body>
+</html>
+

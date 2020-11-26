@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<?php 
+	include "./mysql.php";
+	include "../include_nav4.html";	
+	
+?>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+<!--
+Easy Profile Template
+http://www.templatemo.com/tm-467-easy-profile
+-->
+	<!-- stylesheet css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/templatemo-gray.css">
+</head>
+<body data-spy="scroll" data-target=".navbar-collapse">
+<!-- preloader section -->
+<div class="preloader">
+	<div class="sk-spinner sk-spinner-wordpress">
+       <span class="sk-inner-circle"></span>
+     </div>
+</div>
+
+<!-- header section -->
+<header style="background-color:#b2ddef;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<img src="images/tm-easy-profile.jpg" class="img-responsive img-circle tm-border" alt="templatemo easy profile">
+				<hr>
+				<!--<h1 class="tm-title bold shadow">Julia</h1>-->
+				<h1 class="white bold shadow"> <?php echo $data['name']; ?> </h1>
+				<h1 class="white bold shadow">security factorial 5th</h1>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- about and box4 section -->
+<section class="container">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<div class="box1">
+				<h2 class="white accent">Profile</h2>
+				<br>
+				<p>name : <?php echo $data['name']; ?> </p>
+				<p>email : <?php echo $data['email']; ?> </p>
+				<p>entry date : <?php echo $data['date']; ?> </p>
+				<p>interest : <?php echo $data['interest']; ?></p>
+			</div>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<div class="box3">
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="container">
+	<div class="row">
+		<div class="col-md-8 col-sm-12">
+			<div class="box3">
+				<h2 class="accent">Personal Study</h2>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<details>
+					<summary> 더보기 +</summary>
+					<li></li>
+				</details>
+
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-12">
+			<div class="box4">
+				  <h2 class="white accent">Warning</h2>
+					<strong class="pull-right">OUT *^o^*</strong>
+				        <br>
+				        <br>
+<?php 
+	include "warn.php";
+?>
+
+			</div>
+		</div>
+	</div>
+
+
+<!-- footer section -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<p>Copyright &copy; Security Factorial (✿◕‿◕✿)</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- javascript js -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/custom.js"></script>
+
+</div>
+</body>
+</html>
+
